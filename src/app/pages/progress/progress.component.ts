@@ -6,23 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./progress.component.css'],
 })
 export class ProgressComponent {
-  progress = 30;
+  progress1 = 20;
+  progress2 = 30;
 
-  get getPercentage(): string {
-    return `${this.progress}%`;
+  get getProgress1(): string {
+    return `${this.progress1}%`;
   }
 
-  changeValue(value: number): void {
-    if (this.progress >= 100 && value > 0) {
-      this.progress = 100;
-      return;
-    }
+  get getProgress2(): string {
+    return `${this.progress2}%`;
+  }
 
-    if (this.progress <= 0 && value < 0) {
-      this.progress = 0;
-      return;
-    }
-
-    this.progress += value;
+  changeChildrenValue(value: number): void {
+    console.log('hey', value);
+    this.progress1 = value;
   }
 }

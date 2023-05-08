@@ -7,6 +7,7 @@ import { Chart1Component } from './chart1/chart1.component';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,12 @@ import { SharedModule } from '../shared/shared.module';
     PagesComponent,
     DashboardComponent,
   ],
-  imports: [CommonModule, SharedModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    RouterModule,
+    ComponentsModule,
+  ],
 })
 export class PagesModule {}
